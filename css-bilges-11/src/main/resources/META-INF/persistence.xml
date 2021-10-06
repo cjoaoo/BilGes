@@ -13,10 +13,10 @@
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<shared-cache-mode>NONE</shared-cache-mode> <!-- para permitir fazer testes de integração usando o DBSetup -->
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://dbserver.alunos.di.fc.ul.pt:3306/css011"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:data/derby/css011;create=true"/>
 			<property name="javax.persistence.jdbc.user" value="css011"/>
 			<property name="javax.persistence.jdbc.password" value="css011"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
 		</properties>
 	</persistence-unit>
 </persistence>

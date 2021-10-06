@@ -19,6 +19,16 @@ Run as application src/main/java/dbutils/ResetAndCreateDatabase.java
 Para testar o cliente:
 Run as application src/main/java/SimpleClient.java
 
+Para correr na base de dados Derby:
+Na pasta src/main/resources/META-INF
+- fazer copy paste dos conteúdos de persistence-derby.xml para a secção source do persistence. xml
+- fazer copy paste dos conteúdos de load-script-derbyl.sql para load-script.sql
+
+Para correr na base de dados MySql: (Só funciona na VPN da FCUL)
+Na pasta src/main/resources/META-INF
+- fazer copy paste dos conteúdos de persistence-mysql.xml para a secção source do persistence. xml
+- fazer copy paste dos conteúdos de load-script-mysql.sql para load-script.sql
+
 ### Cliente teste: 
 
 Para escrever o SimpleClient e para a inicialização da base de dados considerem os dados indicados abaixo. Porque há várias operações que são sensíveis à data corrente e queremos que a execução do SimpleClient seja determinística, definam uma classe com um método que é suposto dar a data corrente, mas que tem uma implementação mock que devolve sempre 1/05/2021. Usem esse método para obter a data corrente sempre que ela for precisa (no código do negócio e no SimpleClient).
