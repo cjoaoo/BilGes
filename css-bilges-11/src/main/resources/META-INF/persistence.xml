@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="domain-model-jpa" transaction-type="RESOURCE_LOCAL">
+		<class>business.domain.Bilhete</class>
+		<class>business.domain.BilheteIndividual</class>
+		<class>business.domain.BilhetePasse</class>
+		<class>business.domain.EventoData</class>
+		<class>business.domain.Empresa</class>
+		<class>business.domain.Evento</class>
+		<class>business.domain.Instalacao</class>
+		<class>business.domain.Lugar</class>
+		<class>business.domain.Reserva</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<shared-cache-mode>NONE</shared-cache-mode> <!-- para permitir fazer testes de integração usando o DBSetup -->
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://dbserver.alunos.di.fc.ul.pt:3306/css011"/>
+			<property name="javax.persistence.jdbc.user" value="css011"/>
+			<property name="javax.persistence.jdbc.password" value="css011"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
