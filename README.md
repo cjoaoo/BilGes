@@ -12,13 +12,14 @@ As instalações geridas pelo sistema permitem a realização de eventos, e 
 
 ### Instruções:
 No Eclipse, para iniciar a base de dados Derby:
-
-Run as application src/main/java/dbutils/RunSQLScript.java
 Run as application src/main/java/dbutils/ResetAndCreateDatabase.java
 
-Para testar o cliente:
-Run as application src/main/java/SimpleClient.java
+Para testar o cliente (19 casos teste):
+Run as application src/main/java/client/SimpleClient.java
 
+Nota: Os casos 4, 5, 7, 9, 13, 15 e 19 devem apresentar mensagem de erro com justificação na consola.
+
+### Para mudar de base de dados:
 Para correr na base de dados Derby:
 Na pasta src/main/resources/META-INF
 - fazer copy paste dos conteúdos de persistence-derby.xml para a secção source do persistence. xml
